@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 
 namespace GenerateSummary
 {
@@ -15,7 +16,7 @@ namespace GenerateSummary
                 "# Sumary",
                 "* [За книгата](README.md)"
             };
-        private static int currentPart = 0;
+        private static int currentPart = 1;
         private static int currentChapter = 0;
         private static string outPath = "..\\..\\..\\..\\chapters\\";
         private static string dataPath = "..\\..\\..\\..\\..\\data\\book.md";
@@ -29,6 +30,7 @@ namespace GenerateSummary
             if (Directory.Exists(outPath))
             {
                 Directory.Delete(outPath, true);
+                Thread.Sleep(500);
             }
             Directory.CreateDirectory(outPath);
 
@@ -36,14 +38,13 @@ namespace GenerateSummary
             {                
                 if (line.StartsWith("##"))
                 {
-                    WriteCurrent();
+                    WriteCurrent("##");
                     currentHeading = line.Substring(2).Trim();
                     currentPrefix = "##";
                 }
                 else if (line.StartsWith("#"))
                 {
-                    currentPart++;
-                    WriteCurrent();
+                    WriteCurrent("#");
                     currentHeading = line.Substring(1).Trim();
                     currentPrefix = "#";
                 }
@@ -53,29 +54,38 @@ namespace GenerateSummary
                 }
             }
 
+            WriteCurrent("##");
             File.WriteAllLines(outPath + "summary.md", summary);
             File.Copy(readmePath, outPath + "README.md");
             DirectoryCopy(mediaPath, outPath + "media", true);
         }
 
-        private static void WriteCurrent()
+        private static void WriteCurrent(string newPrefix)
         {
             if (!String.IsNullOrEmpty(currentHeading))
             {
                 // dump current lines into a file called
-                var fileName = currentPrefix == "#" ? $"{currentPart}.md" : $"{currentPart}.{currentChapter}.md";
+                var fileName = $"{currentPart}.{currentChapter}.md";
                 File.WriteAllLines(outPath + "summary.md", currentLines);
                 // add entry into summary 
                 if (currentPrefix == "#")
                 {
                     // * [Part I](part1/README.md)
-                    summary.Add($"* [{currentHeading}]({fileName})");                                        
-                    currentChapter = 0;
+                    summary.Add($"* [{currentHeading}]({fileName})");
                 }
                 else
                 {
                     //      * [Writing is nice](part1 / writing.md)
                     summary.Add($"\t * [{currentHeading}]({fileName})");
+                }
+
+                if (newPrefix == "#")
+                {
+                    currentPart++;
+                    currentChapter = 0;
+                }
+                else
+                {
                     currentChapter++;
                 }
                 currentLines.Insert(0, $"# {currentHeading}");
