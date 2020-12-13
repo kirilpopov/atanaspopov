@@ -1,0 +1,1 @@
+gitbook epub .\chapters ..\docs\kakvolinevidyah.epub --format=ebook

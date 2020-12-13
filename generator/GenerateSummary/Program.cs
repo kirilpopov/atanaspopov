@@ -19,13 +19,19 @@ namespace GenerateSummary
         private static int currentPart = 1;
         private static int currentChapter = 0;
         private static string outPath = "..\\..\\..\\..\\chapters\\";
-        private static string dataPath = "..\\..\\..\\..\\..\\data\\book.md";
-        private static string readmePath = "..\\..\\..\\..\\..\\data\\README.md";
-        private static string mediaPath = "..\\..\\..\\..\\..\\data\\media";
+        private static string rootDataPath = "..\\..\\..\\..\\..\\data\\md\\";
+        private static string bookMDPath = rootDataPath + "book.md";
+        private static string[] filestToMove = new string[] {
+            "README.md",
+            "cover.jpg",
+            "cover_small.jpg",
+            "book.json"
+        };
+        private static string mediaPath = rootDataPath  + "media";
         static void Main(string[] args)
         {
             
-            string[] lines = File.ReadAllLines(dataPath);
+            string[] lines = File.ReadAllLines(bookMDPath);
 
             if (Directory.Exists(outPath))
             {
@@ -56,7 +62,12 @@ namespace GenerateSummary
 
             WriteCurrent("##");
             File.WriteAllLines(outPath + "summary.md", summary);
-            File.Copy(readmePath, outPath + "README.md");
+
+            // move files
+            foreach (var ftm in filestToMove)
+            {
+                File.Copy(rootDataPath + ftm, outPath + ftm);
+            }
             DirectoryCopy(mediaPath, outPath + "media", true);
         }
 
