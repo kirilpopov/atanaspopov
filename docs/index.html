@@ -4,73 +4,168 @@
 <head>
 	<title>Проф. Атанас Попов</title>
 	<meta name="description"
-		content="Атанас Кръстев Попов е български педагог, професор в Югозападния университет „Неофит Рилски“.">
-</head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		content="Атанас Кръстев Попов е български педагог, професор в Югозападния университет „Неофит Рилски“." />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	</link>
+	<script src="https://kit.fontawesome.com/447e49e8df.js" crossorigin="anonymous"></script>
 
-<!-- Bootstrap -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-	integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-<script src="https://kit.fontawesome.com/447e49e8df.js" crossorigin="anonymous"></script>
+	<style>
+		body {
+			background: #e5e5e5;
+		}
+
+		.header {
+			background-image: linear-gradient(to bottom right, #4D4C47, #20221F);
+			color: white;
+			padding: 20px;
+
+		}
+
+		.books {
+			background: #ffffff;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.header img {
+			height: 200px;
+		}
+
+		.fbkLink {
+			color: #ffffff;
+			font-size: 24px;
+		}
+
+		.wkpLink {
+			color: #ffffff;
+			font-size: 22px;
+		}
+
+		.bookCard {
+			display: flex;
+			flex-wrap: wrap;
+			padding-bottom: 40px;
+		}
+
+		.bookCardImage {
+			flex: none;
+			padding-right: 30px;
+
+		}
+	</style>
+
+
 </head>
 
-<body style="background:#e5e5e5">
+<body>
 	<div class="container">
 		<div class="row">
-			<div
-				style="background-image: linear-gradient(to bottom right, #4D4C47, #20221F); color:white; margin: 0 auto; display: block;padding: 20px">
-				<center>
-					<img src="./assets/atanaspopov.png" alt="" style="height:200px;">
+			<div class="col text-center">
+				<div class="header">
+					<img src="./assets/profatanaspopov2.png" alt="Проф. Атанас Попов" class="rounded-circle" />
 					<h1>Проф. Атанас Попов</h1>
-					<h5>педагог, бивш зам.-ректор в Югозападния университет „Неофит Рилски“</h6>
-						<div style="font-size:24px">
-							<a href="https://www.facebook.com/profile.php?id=100001290424291" target="_blank"
-								style="color: White"><i class="fab fa-facebook-square"></i></a>
-							<a href="https://bg.wikipedia.org/wiki/%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81_%D0%9F%D0%BE%D0%BF%D0%BE%D0%B2_(%D0%BF%D0%B5%D0%B4%D0%B0%D0%B3%D0%BE%D0%B3)"
-								target="_blank" style="color: White; font-size:22px"><i
-									class="fab fa-wikipedia-w"></i></a>
-						</div>
-				</center>
-			</div>
-		</div>
-		<div class="row">
-			<div style="background:#ffffff; margin: 0 auto; padding: 20px;">
-				<p>
-				<h3>Книги</h3>
-				</p>
-				<div style="display:flex;flex-wrap: wrap">
-					<div style="flex:none;padding-right: 20px; padding-bottom:20px;">
-						<a href="./kakvolinevidyah/index.html">
-							<img src="./assets/cover_small.jpg" alt="" style="height:250px;">
+					<p >педагог, бивш зам.-ректор в Югозападния университет „Неофит Рилски“</p>
+
+					<div>
+						<a class="fbkLink text-reset" href="https://www.facebook.com/profile.php?id=100001290424291"
+							target="_blank">
+							<i class="fab fa-facebook-square"></i>
+						</a>
+
+						<a class="wkpLink text-reset"
+							href="https://bg.wikipedia.org/wiki/%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81_%D0%9F%D0%BE%D0%BF%D0%BE%D0%B2_(%D0%BF%D0%B5%D0%B4%D0%B0%D0%B3%D0%BE%D0%B3)"
+							target="_blank">
+							<i class="fab fa-wikipedia-w"></i>
 						</a>
 					</div>
-					<div style="flex:1; ">
-						<p>
-							Много видях и преживях. Родих се и прекарах десет години от детството си в
-							царство България. Цели четиридесет и пет години преживях много страдания и
-							унижения през годините на комунистическия режим като „враг на народната власт“.
-							Вече повече от двадесет и осем години пък страдам и от непрокопсания
-							посткомунистически преход, моделиран от българската комунистическа партия и
-							нейната Държавна сигурност. Срещу мен бяха разработени специални „опорни точки“
-							въз основа на даденото Указание от Висшия съвет на БСП за „неутрализиране“ на
-							бившите „врагове на народната власт“.
-							<br /><br />
-							Не бързах да пиша, но всичко преживяно от миналото го кодирах в моите мисли,
-							които легнаха непоклатими в паметта ми. Имам и хубавия навик да пазя всички
-							документи, които илюстрират нагледно и убедително жизнения ми път. И така,
-							седнах и започнах да пиша. Възкръсваха дните и годините, през които животът ми
-							преминаваше....
-						</p>
-						<br />
-						<a href="./kakvolinevidyah/index.html" class="btn btn-primary">Прочети</a>
-						<a href="./kakvolinevidyah.epub" class="btn btn-secondary">Свали ePub</a>
-						<a href="./kakvolinevidyah.pdf" class="btn btn-secondary" role="button">Свали PDF</a>
+				</div>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="books">
+					<h3>Книги</h3>
+
+					<div class="bookCard mt-3">
+						<div class="bookCardImage">
+							<a href="./kakvolinevidyah/index.html">
+								<img src="./assets/cover_small.jpg" alt="Прочети" style="height:250px;">
+							</a>
+						</div>
+						<div style="flex:1; ">
+							<h4>Какво ли не видях и преживях</h4>
+							<h6>2018</h6>
+							<span>
+								Много видях и преживях. Родих се и прекарах десет години от детството си в
+								царство България. Цели четиридесет и пет години преживях много страдания и
+								унижения през годините на комунистическия режим като „враг на народната власт“.
+								Вече повече от двадесет и осем години пък страдам и от непрокопсания
+								посткомунистически преход, моделиран от българската комунистическа партия и
+								нейната Държавна сигурност.
+								<br /><br />
+								Не бързах да пиша, но всичко преживяно от миналото го кодирах в моите мисли,
+								които легнаха непоклатими в паметта ми. Имам и хубавия навик да пазя всички
+								документи, които илюстрират нагледно и убедително жизнения ми път. И така,
+								седнах и започнах да пиша. Възкръсваха дните и годините, през които животът ми
+								преминаваше....
+							</span>
+							<div class="mt-3">
+								<a href="./kakvolinevidyah/index.html" class="btn btn-primary">Прочети</a>
+								<a href="./kakvolinevidyah.epub" class="btn btn-secondary">Свали ePub</a>
+								<a href="./kakvolinevidyah.pdf" class="btn btn-secondary" role="button">Свали PDF</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="border-top w-100 p-3"></div>
+
+					<div class="bookCard mt-3">
+						<div class="bookCardImage">
+							<img src="./assets/koreni_cover.jpg" style="height:250px;">
+						</div>
+						<div style="flex:1; ">
+							<h4>Възрожденските корени на моя род</h4>
+							<h6>2010</h6>
+							<p>
+								Книгата описва историята на известния Зимбилев род от село Либяхово (сега Илинден), от
+								който произхожда проф. Атанас Попов. От там произхождат и редица от най-значимите личности
+								на Неврокопския край, посветили живота си на българското образование и македонското
+								революционно движение през Възраждането.
+							</p>
+							<br />
+							<a href="./vazrozhdenskite-koreni-na-moya-rod.pdf" class="btn btn-secondary" role="button">Свали PDF</a>
+						</div>
+					</div>
+
+					<div class="border-top w-100 p-3"></div>
+
+					<div class="bookCard mt-3">
+						<div class="bookCardImage">
+							<img src="./assets/vmro_cover.jpg" alt="Прочети" style="height:250px;">
+						</div>
+						<div style="flex:1; ">
+							<h4>Истината за фалшификатите на историческата ВМРО</h4>
+							<h6>2006</h6>
+							<p>
+								ВМРО на нашите прадеди, деди и бащи е най-изстрадалата българска патриотична организация, която още от своето създаване на 23 октомври 1893 г. води нестихваща борба за свободата на Македония и Тракия, свързана с националното обединяване на българския народ. Нейните неизлечими рани са получени през бурните дни на Илинденско-Преображенското въстание, Балканската, Междусъюзническата и Първата световна война, както и в по-нататъшната ù революционна дейност.
+								<br /><br />
+								Мой морален дълг е да разкрия истината за фалшификатите на историческата ВМРО, 
+								създадени под прякото ръководство на Политбюро на ЦК на БКП и Държавна сигурност. 
+								Затова предлагам на читателите настоящата книга, която написах въз основа на конкретни документални факти, 
+								мои лични преживявания и наблюдения.
+							</p>
+							<br />
+							<a href="./istinata-za-VMRO.pdf" class="btn btn-secondary" role="button">Свали PDF</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 </body>
 
 </html>
