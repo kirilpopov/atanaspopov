@@ -11,10 +11,17 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	</link>
+
 	<script src="https://kit.fontawesome.com/447e49e8df.js" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+		crossorigin="anonymous"></script>
 
 	<style>
 		body {
@@ -22,7 +29,7 @@
 		}
 
 		.header {
-			background-image: linear-gradient(to bottom right, #4D4C47, #20221F);
+			background-image: linear-gradient(to bottom right, #4D4C47, #07508d);
 			color: white;
 			padding: 20px;
 
@@ -69,10 +76,10 @@
 		gtag('js', new Date());
 		gtag('config', 'G-1CER3Y6PGT');
 	</script>
-
 </head>
 
 <body>
+
 	<div class="container">
 		<div class="row">
 			<div class="col text-center">
@@ -97,94 +104,216 @@
 			</div>
 
 		</div>
-		<div class="row">
-			<div class="col">
-				<div class="books">
-					<h3>Книги</h3>
 
-					<div class="bookCard mt-3">
-						<div class="bookCardImage">
-							<a href="./kakvolinevidyah/index.html">
-								<img src="./assets/cover_small.jpg" alt="Прочети" style="height:250px;">
-							</a>
-						</div>
-						<div style="flex:1; ">
-							<h4>Какво ли не видях и преживях</h4>
-							<h6>2018</h6>
-							<span>
-								Много видях и преживях. Родих се и прекарах десет години от детството си в
-								царство България. Цели четиридесет и пет години преживях много страдания и
-								унижения през годините на комунистическия режим като „враг на народната власт“.
-								Вече повече от двадесет и осем години пък страдам и от непрокопсания
-								посткомунистически преход, моделиран от българската комунистическа партия и
-								нейната Държавна сигурност.
-								<br /><br />
-								Не бързах да пиша, но всичко преживяно от миналото го кодирах в моите мисли,
-								които легнаха непоклатими в паметта ми. Имам и хубавия навик да пазя всички
-								документи, които илюстрират нагледно и убедително жизнения ми път. И така,
-								седнах и започнах да пиша. Възкръсваха дните и годините, през които животът ми
-								преминаваше....
-							</span>
-							<div class="mt-3">
-								<a href="./kakvolinevidyah/index.html" class="btn btn-primary">Прочети</a>
-								<a href="./kakvolinevidyah.epub" class="btn btn-secondary">Свали ePub</a>
-								<a href="./kakvolinevidyah.pdf" class="btn btn-secondary" role="button">Свали PDF</a>
-							</div>
-						</div>
-					</div>
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+					aria-selected="true">Биография</a>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a class="nav-link" id="books-tab" data-toggle="tab" href="#books" role="tab" aria-controls="books"
+					aria-selected="false">Книги</a>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a class="nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video"
+					aria-selected="false">Видеа</a>
+			</li>		
+		</ul>
 
-					<div class="border-top w-100 p-3"></div>
-
-					<div class="bookCard mt-3">
-						<div class="bookCardImage">
-							<img src="./assets/koreni_cover.jpg" style="height:250px;">
-						</div>
-						<div style="flex:1; ">
-							<h4>Възрожденските корени на моя род</h4>
-							<h6>2010</h6>
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<!-- Биография-->
+			<div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+				<div class="row">
+					<div class="col">
+						<div class="books">
+							<h3>
+								Проф. д-р Атанас Кръстев Попов
+							</h3>
+							<br /></br />
 							<p>
-								Книгата описва историята на известния Зимбилев род от село Либяхово (сега Илинден), от
-								който произхожда проф. Атанас Попов. От там произхождат и редица от най-значимите
-								личности
-								на Неврокопския край, посветили живота си на българското образование и македонското
-								революционно движение през Възраждането.
+								Проф. д-р Атанас Кръстев Попов е роден в с. Либяхово (сега Илинден), Неврокопско на 22
+								май 1935г.
+								Произхожда от възрожденски род, в който просветните и революционните традиции се
+								предават от
+								поколение на поколение.
 							</p>
-							<br />
-							<a href="./vazrozhdenskite-koreni-na-moya-rod.pdf" class="btn btn-secondary"
-								role="button">Свали PDF</a>
-						</div>
-					</div>
-
-					<div class="border-top w-100 p-3"></div>
-
-					<div class="bookCard mt-3">
-						<div class="bookCardImage">
-							<img src="./assets/vmro_cover.jpg" alt="Прочети" style="height:250px;">
-						</div>
-						<div style="flex:1; ">
-							<h4>Истината за фалшификатите на историческата ВМРО</h4>
-							<h6>2006</h6>
 							<p>
-								ВМРО на нашите прадеди, деди и бащи е най-изстрадалата българска патриотична
-								организация, която още от своето създаване на 23 октомври 1893 г. води нестихваща борба
-								за свободата на Македония и Тракия, свързана с националното обединяване на българския
-								народ. Нейните неизлечими рани са получени през бурните дни на
-								Илинденско-Преображенското въстание, Балканската, Междусъюзническата и Първата световна
-								война, както и в по-нататъшната ù революционна дейност.
-								<br /><br />
-								Мой морален дълг е да разкрия истината за фалшификатите на историческата ВМРО,
-								създадени под прякото ръководство на Политбюро на ЦК на БКП и Държавна сигурност.
-								Затова предлагам на читателите настоящата книга, която написах въз основа на конкретни
-								документални факти,
-								мои лични преживявания и наблюдения.
+								Той е правнук на създателя на първите новобългарски училища в Източна Македония Георги
+								Иванов Зимбилев и внук на Неврокопския пунктов войвода на ВМРО Атанас Попов, на когото
+								носи
+								името. През годините на комунистическия режим целият му род е жестоко преследван.
+								След завършване на елитната Неврокопска гимназия с отличен успех комунистическата власт
+								не разрешава на Атанас Попов да продължи висшето си образование . След три години за
+								него
+								се застъпва окръжния училищен инспектор Никола Пашов, който му помага да продължи
+								полувисше
+								образование, но в биографията му остава клеймото „неблагонадежден, отношението му към
+								народната власт е отрицателно“, поради което постоянно е наблюдаван и преследван от
+								Държавна
+								сигурност.
 							</p>
-							<br />
-							<a href="./istinata-za-VMRO.pdf" class="btn btn-secondary" role="button">Свали PDF</a>
+							<p>
+								През 1959 г. за Атанас Попов е открито оперативно дело по линия „враждебна интелигенция“
+								заради извършваната от него „вражеска дейност“. Същата година е изпратен в специално
+								създадения по съветски образец лагер за децата и внуците на „враговете на народната
+								власт“ в
+								с. Люти дол, Врачанско, откъдето след една година е преместен в трудова повинност.
+								Като прогимназиален учител Атанас Попов е учителствал в родопските и пирински села
+								Вълкосел,
+								Туховище, Ковачевица, Дъбница и Тешево. Бил е гимназиален учител в Банско и Разлог. В
+								полувисшия институт за подготовка на културно-просветни кадри в Благоевград е наказван
+								дисциплинарно за „системно подронване авторитета на партийното и държавното
+								ръководство“.
+							</p>
+							<p>
+								От 1983 г. проф. д-р Атанас Попов е преподавател в Югозападния университет „Неофит
+								Рилски“.
+								В навечерието и след промените през 1990 г. е бил ръководител на катедра, зам.-декан,
+								зам.-ректор, председател на Научния съвет по педагогика и психология в Югозападния
+								университет, член на Комисията по обществени науки към ВАК в Министерския съвет, 15
+								години е
+								гост-професор на Пловдивския университет "Паисий Хилендарски“.
+							</p>
+							<p>
+								С името на проф. д-р Атанас Попов е свързано утвърждаването на Югозападния университет
+								„Неофит Рилски“ и изграждането на академичната му структура.
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- Книги-->
+			<div class="tab-pane" id="books" role="tabpanel" aria-labelledby="books-tab">
+				<div class="row">
+					<div class="col">
+						<div class="books">
+						 
+
+							<div class="bookCard mt-3">
+								<div class="bookCardImage">
+									<a href="./kakvolinevidyah/index.html">
+										<img src="./assets/cover_small.jpg" alt="Прочети" style="height:250px;">
+									</a>
+								</div>
+								<div style="flex:1; ">
+									<h4>Какво ли не видях и преживях</h4>
+									<h6>2018</h6>
+									<span>
+										Много видях и преживях. Родих се и прекарах десет години от детството си в
+										царство България. Цели четиридесет и пет години преживях много страдания и
+										унижения през годините на комунистическия режим като „враг на народната власт“.
+										Вече повече от двадесет и осем години пък страдам и от непрокопсания
+										посткомунистически преход, моделиран от българската комунистическа партия и
+										нейната Държавна сигурност.
+										<br /><br />
+										Не бързах да пиша, но всичко преживяно от миналото го кодирах в моите мисли,
+										които легнаха непоклатими в паметта ми. Имам и хубавия навик да пазя всички
+										документи, които илюстрират нагледно и убедително жизнения ми път. И така,
+										седнах и започнах да пиша. Възкръсваха дните и годините, през които животът ми
+										преминаваше....
+									</span>
+									<div class="mt-3">
+										<a href="./kakvolinevidyah/index.html" class="btn btn-primary">Прочети</a>
+										<a href="./kakvolinevidyah.epub" class="btn btn-secondary">Свали ePub</a>
+										<a href="./kakvolinevidyah.pdf" class="btn btn-secondary" role="button">Свали
+											PDF</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="border-top w-100 p-3"></div>
+
+							<div class="bookCard mt-3">
+								<div class="bookCardImage">
+									<img src="./assets/koreni_cover.jpg" style="height:250px;">
+								</div>
+								<div style="flex:1; ">
+									<h4>Възрожденските корени на моя род</h4>
+									<h6>2010</h6>
+									<p>
+										Книгата описва историята на известния Зимбилев род от село Либяхово (сега
+										Илинден), от
+										който произхожда проф. Атанас Попов. От там произхождат и редица от
+										най-значимите
+										личности
+										на Неврокопския край, посветили живота си на българското образование и
+										македонското
+										революционно движение през Възраждането.
+									</p>
+									<br />
+									<a href="./vazrozhdenskite-koreni-na-moya-rod.pdf" class="btn btn-secondary"
+										role="button">Свали PDF</a>
+								</div>
+							</div>
+
+							<div class="border-top w-100 p-3"></div>
+
+							<div class="bookCard mt-3">
+								<div class="bookCardImage">
+									<img src="./assets/vmro_cover.jpg" alt="Прочети" style="height:250px;">
+								</div>
+								<div style="flex:1; ">
+									<h4>Истината за фалшификатите на историческата ВМРО</h4>
+									<h6>2006</h6>
+									<p>
+										ВМРО на нашите прадеди, деди и бащи е най-изстрадалата българска патриотична
+										организация, която още от своето създаване на 23 октомври 1893 г. води
+										нестихваща борба
+										за свободата на Македония и Тракия, свързана с националното обединяване на
+										българския
+										народ. Нейните неизлечими рани са получени през бурните дни на
+										Илинденско-Преображенското въстание, Балканската, Междусъюзническата и Първата
+										световна
+										война, както и в по-нататъшната ù революционна дейност.
+										<br /><br />
+										Мой морален дълг е да разкрия истината за фалшификатите на историческата ВМРО,
+										създадени под прякото ръководство на Политбюро на ЦК на БКП и Държавна
+										сигурност.
+										Затова предлагам на читателите настоящата книга, която написах въз основа на
+										конкретни
+										документални факти,
+										мои лични преживявания и наблюдения.
+									</p>
+									<br />
+									<a href="./istinata-za-VMRO.pdf" class="btn btn-secondary" role="button">Свали
+										PDF</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Видео-->
+			<div class="tab-pane" id="video" role="tabpanel" aria-labelledby="video-tab">
+				<div class="row">
+					<div class="col">
+						<div class="books">
+							<h3>
+								Откриване на паметна плоча на войводата Атанас Попов /20.10.1998/</h3>
+							<p>
+								На 20 октомври 1998 година дейци и потомци на
+								ВМРО от Неврокопския край се стекоха на лобното място
+								на войводата Атанас Попов и откриха, в присъствието на
+								пет свещеници, както е било при погребението и
+								панахидите му, паметна плоча в знак на признателност за
+								неговото родолюбиво дело.
+							</p>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/27LiqE0FXw8"
+								title="YouTube video player" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">4</div>
 		</div>
+
+
 </body>
 
 </html>
